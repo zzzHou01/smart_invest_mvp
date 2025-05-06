@@ -54,3 +54,7 @@ smart_invest_mvp/
     ├─batch_bt.py      # 批量回測
     └─utils/           # 下載、特徵工程輔助腳本
 ``` 
+
+- **環境建置與 TA-Lib 0.5.1** → `docs/SETUP.md`
+- **數據流程與指令** → `docs/WORKFLOW.md`
+- **開發／除錯紀錄** → `docs/CHANGELOG.md`
