@@ -1,22 +1,17 @@
-# SmartInvest MVP (TW Stock)
-
-簡易 **AI 理財顧問** — 批量回測、視覺化、下載選股  
-![demo](docs/screenshot.png) 
-
----
-
----
----
+# SmartInvest MVP(TW Stock)
 
 ## Features
--  批量回測排行　: AnnRet %、Sharpe、WinRate %
--  Sidebar 篩選 :　Sharpe & WinRate % 立即過濾
--  資金曲線 :　倍率 / 實際金額切換＋自訂本金
--  CSV 下載 :　一鍵匯出目前篩選結果
-
----
+- 批量回測排行
+- Sidebar 即時篩選
+- 資金曲線（倍率／金額）
+- 一鍵下載 CSV
 
 ## Quick Start
+```bash
+conda create -n smartinvest python=3.11 -y
+conda activate smartinvest
+pip install -r requirements.txt
+streamlit run app.py
 
 ```bash
 # 0. clone 專案
@@ -38,26 +33,20 @@ python src/batch_bt.py                   # M3：批量回測 ➜ reports/
 
 # 4. 啟動前端
 streamlit run app.py
+```
 
 ## Project Structure
+```text
 smart_invest_mvp/
-│  app.py           # Streamlit interface
+│  app.py              # Streamlit interface
 ├─data/
-│   ├─raw/          # 原始 OHLCV parquet
-│   └─feat/         # 加 TA-Lib 指標
+│   ├─raw/             # 原始 OHLCV parquet
+│   └─feat/            # 加 TA-Lib 指標
 ├─reports/
 │   ├─rank.csv
-│   └─*_bt.csv      # 含 date 欄
+│   └─*_bt.csv         # 含 date 欄
 └─src/
-    ├─backtest.py   # 單檔回測
-    ├─batch_bt.py   # 批量回測
-    └─utils/        # 下載、特徵工程等輔助腳本
-
-> *備註*  
-> - `utils/` 夾在 `src/` 底下已經是正確位置；無需移動。  
-> - 這段目錄樹只出現在文件中，用來說明檔案作用，不會影響專案程式碼。
-
-##  Documentation
-環境建置 & TA-Lib  | [docs/SETUP.md](docs/SETUP.md) 
-數據流程與指令  [docs/WORKFLOW.md](docs/WORKFLOW.md) 
-開發／除錯紀錄      [docs/CHANGELOG.md](docs/CHANGELOG.md)
+    ├─backtest.py      # 單檔回測
+    ├─batch_bt.py      # 批量回測
+    └─utils/           # 下載、特徵工程輔助腳本
+``` 
