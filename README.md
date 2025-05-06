@@ -19,21 +19,25 @@ git clone https://github.com/zzzHou01/smart_invest_mvp.git
 cd smart_invest_mvp
 ```
 # 1. 建 conda 環境
+```
 conda create -n smartinvest python=3.11 -y
 conda activate smartinvest
-
+```
 # 2. 安裝相依
+```
 pip install -r requirements.txt          # 先快速跑起來
 # TA-Lib 若安裝失敗 → 詳見 docs/SETUP.md
-
+```
+```
 # 3. 產生資料與回測（首次執行）
 python src/utils/download_tw.py          # M1：下載 raw parquet
 python src/utils/make_features.py        # M2：技術指標
 python src/batch_bt.py                   # M3：批量回測 ➜ reports/
-
+```
 # 4. 啟動前端
+```
 streamlit run app.py
-
+```
 
 ## Project Structure
 ```text
