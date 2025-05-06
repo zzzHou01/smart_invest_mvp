@@ -1,8 +1,11 @@
 # SmartInvest MVP (TW Stock)
 
-簡易 AI 理財顧問：批量回測、視覺化、下載選股  
-![demo](docs/screenshot.png) <!-- 之後可替換為實際截圖 -->
+簡易 **AI 理財顧問** — 批量回測、視覺化、下載選股  
+![demo](docs/screenshot.png) 
 
+---
+
+---
 ---
 
 ## Features
@@ -53,3 +56,8 @@ smart_invest_mvp/
 > *備註*  
 > - `utils/` 夾在 `src/` 底下已經是正確位置；無需移動。  
 > - 這段目錄樹只出現在文件中，用來說明檔案作用，不會影響專案程式碼。
+
+##  Documentation
+環境建置 & TA-Lib  | [docs/SETUP.md](docs/SETUP.md) 
+數據流程與指令  [docs/WORKFLOW.md](docs/WORKFLOW.md) 
+開發／除錯紀錄      [docs/CHANGELOG.md](docs/CHANGELOG.md)
