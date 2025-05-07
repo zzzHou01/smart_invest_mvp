@@ -10,6 +10,7 @@ flowchart LR
     D --> E[backtest.py<br/>單檔回測]
     E --> F[batch_bt.py<br/>批量回測]
     F -->|rank.csv & *_bt.csv| G(app.py<br/>Streamlit 前端)
+```
 
 專案目錄速查
 smart_invest_mvp/
